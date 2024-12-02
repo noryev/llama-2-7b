@@ -118,6 +118,6 @@ if __name__ == "__main__":
         print("\nTroubleshooting steps:")
         print("1. Go to https://huggingface.co/meta-llama/Llama-2-7b-hf")
         print("2. Click 'Access repository' and accept the terms")
-        print("3. Make sure you're logged in with the same account that generated your token")
-        print("4. Check you have enough disk space (need at least 15GB free)")
+        print("3. Make sure you're huggingface token is functioning")
+        print("4. Check you have enough disk space)")
         sys.exit(1)

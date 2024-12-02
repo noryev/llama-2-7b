@@ -12,8 +12,7 @@ RUN mkdir -p /root/.cache/huggingface
 COPY run_llama.py /app/
 COPY .env /app/
 
-# Set environment variables from .env
+# Set environment variables properly
 ENV $(cat .env | xargs)
 
-# Use ENTRYPOINT to allow passing arguments
 ENTRYPOINT ["python", "run_llama.py"]
