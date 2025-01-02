@@ -8,15 +8,11 @@ RUN pip install transformers accelerate bitsandbytes sentencepiece python-dotenv
 # Create model directory
 RUN mkdir -p /app/model
 
-# Copy the Python scripts and .env file
-COPY download_model.py /app/
+# Copy the Python script and .env file
 COPY run_llama.py /app/
 COPY .env /app/
 
 # Set environment variables from .env
 ENV $(cat .env | xargs)
-
-# Download model during build
-RUN python download_model.py
 
 ENTRYPOINT ["python", "run_llama.py"]
